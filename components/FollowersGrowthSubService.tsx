@@ -39,7 +39,7 @@ export default function FollowersGrowthSubService({
   return (
     <section
       id={subService.id || "followers-growth"}
-      className="relative scroll-mt-24 overflow-hidden rounded-3xl sm:rounded-4xl border-2 border-orange-200/90 bg-linear-to-b from-orange-50/40 via-white to-amber-50/20 p-5 xs:p-6 sm:p-8 lg:p-10 2xl:p-12 shadow-xl shadow-orange-500/5 transition-all"
+      className="relative scroll-mt-24 overflow-hidden rounded-3xl sm:rounded-4xl border-2 border-orange-200/90 bg-linear-to-b from-orange-50/40 via-white to-amber-50/20 p-4 xs:p-6 sm:p-8 lg:p-10 2xl:p-12 shadow-xl shadow-orange-500/5 transition-all"
     >
       {/* Background glow orb accents */}
       <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-orange-400/10 blur-3xl" />
@@ -202,22 +202,22 @@ export default function FollowersGrowthSubService({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
-                className={`group flex flex-col justify-between rounded-3xl border bg-white p-5 xs:p-6 sm:p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${accentBorder}`}
+                className={`group flex flex-col justify-between rounded-3xl border bg-white p-4 xs:p-6 sm:p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${accentBorder}`}
               >
                 <div>
                   {/* Card Top: Platform Brand header & Metric Chip */}
-                  <div className="flex items-start justify-between gap-3 border-b border-navy-100/70 pb-4">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 border-b border-navy-100/70 pb-4">
+                    <div className="flex items-center gap-2.5 xs:gap-3 min-w-0">
                       <span
-                        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl shadow-xs ${headerBg}`}
+                        className={`flex h-11 w-11 xs:h-12 xs:w-12 shrink-0 items-center justify-center rounded-2xl shadow-xs ${headerBg}`}
                       >
                         <SocialIcon
                           name={platform.slug}
-                          className="h-6 w-6"
+                          className="h-5 w-5 xs:h-6 xs:w-6"
                         />
                       </span>
-                      <div>
-                        <h3 className="font-display text-lg font-bold text-navy-950">
+                      <div className="min-w-0">
+                        <h3 className="font-display text-base xs:text-lg font-bold text-navy-950">
                           {platform.name}
                         </h3>
                         <p className="text-xs font-semibold text-orange-600 mt-0.5">
@@ -226,11 +226,11 @@ export default function FollowersGrowthSubService({
                       </div>
                     </div>
 
-                    <div className="shrink-0 text-right rounded-xl bg-navy-50/70 border border-navy-100/70 px-2.5 py-1.5">
-                      <span className="block text-[9px] uppercase font-bold tracking-wider text-navy-500">
+                    <div className="w-full sm:w-auto shrink-0 flex sm:block items-center justify-between sm:text-right rounded-xl bg-navy-50/70 border border-navy-100/70 px-3 py-1.5 sm:px-2.5 sm:py-1.5">
+                      <span className="text-[10px] sm:text-[9px] uppercase font-bold tracking-wider text-navy-500">
                         {platform.metricLabel}
                       </span>
-                      <span className="font-display text-xs sm:text-sm font-extrabold text-navy-900 whitespace-nowrap">
+                      <span className="font-display text-xs sm:text-sm font-extrabold text-navy-900 sm:whitespace-nowrap sm:block">
                         {platform.metricValue}
                       </span>
                     </div>
@@ -238,7 +238,7 @@ export default function FollowersGrowthSubService({
 
                   {/* Focus & Strategy */}
                   <div className="mt-4">
-                    <h4 className="font-display text-sm sm:text-base font-bold text-navy-900">
+                    <h4 className="font-display text-sm sm:text-base font-bold text-navy-900 break-words">
                       {platform.focus}
                     </h4>
                     <p className="mt-2 text-xs sm:text-sm leading-relaxed text-ink-muted">
